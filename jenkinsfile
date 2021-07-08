@@ -1,6 +1,6 @@
 node {
     stage('build') {
-        git 'https://github.com/nebihaa/hello-docker.git  '
-        def myImage = docker.build 'nebiha11/hello'
+        def myImage = docker.image ('nebiha11/hello')
+        myImage.pull()
     }
 }
