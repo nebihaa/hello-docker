@@ -2,5 +2,6 @@ node {
     stage('build') {
         def myImage = docker.image ('nebiha11/hello')
         myImage.pull()
+        myImage
     }
 }
