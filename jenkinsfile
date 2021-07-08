@@ -1,9 +1,9 @@
 node {
     stage('build') {
-        def myImage = docker.image ('nebiha11/hello').run()
+        def myImage = docker.image ('nebiha11/hello')
+        myImage.docker.container()
+       // bat " docker run nebiha11/hello"
         
-        //bat " docker run nebiha11/hello"
-        //myImage.run('-d, ')
           
     }
 }
