@@ -1,0 +1,6 @@
+node {
+    stage('build') {
+        git 'https://github.com/nebihaa/hello-docker.git  '
+        def myImage = docker.build 'nebiha11/hello'
+    }
+}
